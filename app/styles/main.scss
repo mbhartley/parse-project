@@ -15,6 +15,7 @@ body {
     padding-bottom: 20px;
 }
 
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -64,6 +65,15 @@ body {
     line-height: 100%;
     margin-bottom: 16px;
     border-radius: 6px;
+}
+
+.list-name, .list-city, .list-email {
+    font-size: 22px;
+    display: inline-block;
+}
+
+.list-city, .list-email {
+    margin-left: 60px;
 }
 
 .submit {
