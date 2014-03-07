@@ -6,22 +6,49 @@ $(function(){
 
   console.log ('parse initialize firing')
 
-  var Contact = Parse.Object.extend('Contact');
+  $('.submit').click(function() {
+    saveContact();
+  })
 
-  var contact = new Contact();
+  function saveContact() {
+    var Contact = Parse.Object.extend("Contact");
+    var contact = new Contact;
 
-  contact.set("contactName", "Matt Hartley");
-  contact.set("contactCity", "Greenville");
-  contact.set("email", "mbhartley1490@gmail.com");
+    var name = $('.name').val();
+    var city = $('.city').val();
+    var email = $('.email').val();
+  
+    contact.set("name", name);
+    contact.set("city", city);
+    contact.set("email", email);
 
-  //contact.save(null, {
-  //	success: function(contactList){
-  //	  console.log('New object created with objectID' + contact.id);
-  //	},
-  //	error: function(contactList, error){
-  //	  console.log('Failed to create new object, with error code' + error.description);	
-  //	}
 
-  //});
+  contact.save(null, {
+    success: function(contactList){
+      console.log('New object created with objectID' + contact.id);
+      var name = $('.name').val('');
+      var city = $('.city').val('');
+      var email = $('.email').val('');
 
+    },
+    error: function(contactList, error){
+      console.log('Failed to create new object, with error code' + error.description);  
+    }
+  })
+
+  }  
 })
+
+
+
+ //var name = $('input[name=name]');
+ //var city = $('input[city=city]');
+ //var email = $('input[email=email]');
+
+  
+
+
+
+
+
+
