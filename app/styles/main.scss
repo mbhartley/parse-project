@@ -15,6 +15,12 @@ body {
     padding-bottom: 20px;
 }
 
+.img-responsive {
+    position: absolute;
+    z-index: -20;
+    height: auto;
+    width: 100%;
+}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -115,4 +121,11 @@ body {
     .jumbotron {
         border-bottom: 0;
     }
+}
+
+.contact-card {
+    background-color: gray;
+    height: 80px;
+    width: 400px;
+    margin-bottom: 10px;
 }

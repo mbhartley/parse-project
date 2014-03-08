@@ -25,7 +25,7 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+    <!--<img src="images/lion.jpg" class="img-responsive" alt="Responsive image">-->
 
         <div class="container">
             <div class="header">
@@ -56,9 +56,11 @@
         </div>
 
         <script type="text/template" id="contact-list-template">
+          <div class="contact-card">
             <div class="list-name"> <%= model.get('name') %> </div>
             <div class="list-city"> <%= model.get('city') %> </div>
             <div class="list-email"> <%= model.get('email') %> </div>
+          </div>
         </script>
 
 
